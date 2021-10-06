@@ -8,14 +8,13 @@ public class Palindrome {
     public static String reverseString(String s) {
         String newStr = "";
         for (int i = s.length()-1; i>=0; i--) {
-            char a = s.charAt(i);
-            newStr+=a;
+            newStr += s.charAt(i); //Добавляет каждый символ с начальной строки в перевернутую строку
         }
         return newStr;
     }
     public static boolean isPalindrome(String s) {
-        s = s.toLowerCase();
-        String reverses = reverseString(s);
-        return s.equals(reverses);
+        s = s.toLowerCase(); //Перевод строки в нижний регистр
+        String reverses = reverseString(s); //Сохраняет перевернутую строку для дальнейшей проверки
+        return s.equals(reverses); //Перевернутое слово равнивает с первоначальным словом
     }
 }
